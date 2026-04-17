@@ -1,5 +1,0 @@
-No, Java does not allow this. This relates to the rules of Method Overloading in Java.
-
-To overload a method, the parameter lists must be different in terms of the number of parameters, their data types, or their order. Java compiler distinguishes methods by their data types, not by the variable names.
-
-Both constructors DigitalVideoDisc(String title) and DigitalVideoDisc(String category) have the exact same parameter type: a single String. If we call new DigitalVideoDisc("Action"), the Java compiler will be confused and won't know which constructor to invoke, resulting in a compilation error.
