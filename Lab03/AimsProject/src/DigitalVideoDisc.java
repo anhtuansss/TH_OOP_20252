@@ -4,12 +4,12 @@ public class DigitalVideoDisc {
     private String director;   
     private int length;        
     private float cost;
-
-	// Class variable to track the total number of DVDs created
+	
+  // Class variable to track the total number of DVDs created
 	private static int nbDigitalVideoDiscs = 0; 
 	// Instance variable for unique ID
-    private int id;
-
+  private int id;
+  
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
@@ -50,6 +50,10 @@ public class DigitalVideoDisc {
 	@Override 
 	public String toString() {
 		return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$";
+	}
+	
+	public void setTitle(String title) {
+    	this.title = title;
 	}
 
 	public void setTitle(String title) {
