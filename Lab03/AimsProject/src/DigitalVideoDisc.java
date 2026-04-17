@@ -56,6 +56,10 @@ public class DigitalVideoDisc {
 		this.title = title;
 	}
 
+	public boolean isMatch(String title) {
+		return this.getTitle().equalsIgnoreCase(title);
+	}
+
 	public String getTitle() {
 		return title;
 	}
