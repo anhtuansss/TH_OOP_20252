@@ -14,17 +14,10 @@ public class Cart {
 	}
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-        for (int i = 0; i < dvdList.length; i++) {
-            if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-                itemsOrdered[qtyOrdered] = dvdList[i];
-                qtyOrdered++;
-                System.out.println("The disc " + dvdList[i].getTitle() + " has been added");
-            } else {
-                System.out.println("The cart is almost full. Cannot add " + dvdList[i].getTitle());
-                break; 
-            }
-        }
-    }
+		for (int i = 0; i < dvdList.length; i++) {
+			addDigitalVideoDisc(dvdList[i]);
+		}
+	}
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         addDigitalVideoDisc(dvd1);

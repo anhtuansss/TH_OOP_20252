@@ -4,7 +4,7 @@ public class DigitalVideoDisc {
     private String director;   
     private int length;        
     private float cost;
-
+    
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
@@ -32,6 +32,10 @@ public class DigitalVideoDisc {
 		this.director = director;
 		this.length = length;
 		this.cost = cost;
+	}
+	
+	public void setTitle(String title) {
+    	this.title = title;
 	}
 
 	public String getTitle() {
