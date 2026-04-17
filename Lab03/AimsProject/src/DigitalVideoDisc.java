@@ -47,6 +47,10 @@ public class DigitalVideoDisc {
         this.id = nbDigitalVideoDiscs; // Assign unique ID
 	}
 
+	@Override 
+	public String toString() {
+		return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$";
+	}
 
 	public void setTitle(String title) {
 		this.title = title;
