@@ -30,7 +30,7 @@ public class CartScreen extends JFrame {
 
         Platform.runLater(() -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/cart.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/Cart.fxml"));
 
                 CartScreenController controller = new CartScreenController(cart, this);
                 loader.setController(controller);
