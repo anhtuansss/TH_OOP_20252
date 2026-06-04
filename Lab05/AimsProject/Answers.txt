@@ -1,0 +1,49 @@
+1. What class should implement the Comparable interface?
+Answer:
+Media should implement Comparable<Media>, because the cart stores different media types as Media objects.
+
+
+2. How should compareTo() be implemented?
+Answer:
+If we use natural ordering by title then cost, compareTo() should compare title alphabetically first.
+If the titles are equal, it should compare cost in decreasing order.
+
+
+3. Can we have two ordering rules if we use Comparable?
+Answer:
+No. Comparable defines only one natural ordering for a class.
+To support multiple ordering rules, such as sorting by title then cost and sorting by cost then title, Comparator is more suitable.
+
+
+4. Suppose DVDs have a different ordering rule from other media types, by title, then decreasing length, then cost. How would we modify the code?
+Answer:
+We should use Comparator.
+We can create a specific Comparator for DigitalVideoDisc, or modify a Media comparator to check whether both objects are DigitalVideoDisc.
+If both are DVDs, compare title first, then length in decreasing order, then cost.
+For other media types, use the normal ordering rule.
+
+
+5. What are the main differences between AWT and Swing?
+Answer:
+AWT components are heavyweight and depend more on the native platform UI.
+Swing components are lightweight, richer, more flexible, and usually extend JComponent/JFrame/JPanel.
+Both use containers, layout managers, and event listeners.
+
+
+6. Why does Cart use ObservableList?
+Answer:
+TableView observes ObservableList changes.
+When media are added, removed, or cleared, the cart table can refresh automatically without manually rebuilding the whole table.
+
+
+7. What is PlayerException and why is it checked?
+Answer:
+PlayerException is a user-defined exception for invalid media playback, such as length <= 0.
+It extends Exception, so it is checked and callers must handle it with try-catch or declare throws.
+
+
+8. How is Media.equals() implemented?
+Answer:
+Two Media objects are equal when they have the same title.
+The method checks instanceof before casting and uses null-safe title comparison.
+hashCode() is also overridden consistently with equals().
